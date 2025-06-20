@@ -12,7 +12,7 @@ Bean.Config = {
 -- core services all listed here
 Bean.Loader = require(script.Loader)
 Bean.Debug = require(script.Debug)
-
+Bean.Promise = require(script.Promise)
 
 
 return Bean

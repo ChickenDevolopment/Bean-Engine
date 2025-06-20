@@ -1,9 +1,11 @@
 local Core = require(script.Parent)
 local Config = Core.Config.Loader
 
+
+local loader = {}
 -- attributes and variables
 
-    local loader = {}
+    
     local runservice = game:GetService("RunService")
     local OgRequire = require
 
