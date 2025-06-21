@@ -13,6 +13,6 @@ Bean.Config = {
 Bean.Loader = require(script.Loader)
 Bean.Debug = require(script.Debug)
 Bean.Promise = require(script.Promise)
-
+Bean.Maid = require(script.Maid)
 
 return Bean

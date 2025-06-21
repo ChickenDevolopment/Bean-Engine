@@ -1,16 +1,21 @@
--- Framework/Core/Promise.lua
+-- done by chat gpt due to lazyiness
 
 local Promise = {}
 Promise.ClassName = "Promise"
 
 function Promise.new(executor)
-    local self = setmetatable({}, Promise)
+    local self = setmetatable({
+        _state = "Pending" ,  -- "Fulfilled", "Rejected" 
+        _value = nil , 
+        _successCallbacks = {} ,
+        _errorCallbacks = {} , 
+        _finallyCallbacks = {}
+    }, Promise)
 
-    self._state = "Pending" -- "Fulfilled", "Rejected"
-    self._value = nil
-    self._successCallbacks = {}
-    self._errorCallbacks = {}
-    self._finallyCallbacks = {}
+    
+    
+    
+    
 
     local function resolve(value)
         if self._state ~= "Pending" then return end
